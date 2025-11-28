@@ -1,0 +1,53 @@
+.captcha {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  min-width: 100px;
+  min-height: 100px;
+  background: #FFF;
+  border-radius: 4px;
+  box-shadow: 2px 2px 32px #0002, 2px 2px 4px #0003;
+  padding: 10px;
+  p {
+    margin: 0 0 8px;
+  }
+  div {
+    display: flex;
+    gap: 3px;
+    width: calc((96px + 3px) * 3);
+    flex-wrap: wrap;
+    img {
+      transition: scale 0.1s, outline 0.1s, filter 0.1s;
+      width: 96px;
+      height: 96px;
+      cursor: pointer;
+      outline: 2px solid #e65fff00;
+      outline-offset: -1px;
+      border-radius: 2px;
+      filter: none;
+      scale: 1;
+      &.selected {
+        scale: 0.93;
+        outline: 2px solid #e65fff;
+        border-radius: 2px;
+        filter: contrast(0.50) brightness(1.35);
+      }
+      @starting-style {
+        scale: 0.5;
+      }
+    }
+  }
+  button {
+    margin: 8px 0 0 auto;
+  }
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.3s cubic-bezier(0,0.3,0,1), transform 0.3s cubic-bezier(0,0.3,0,1);
+  @starting-style {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}

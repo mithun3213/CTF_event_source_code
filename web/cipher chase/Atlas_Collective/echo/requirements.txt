@@ -1,0 +1,9 @@
+<<<<<<< HEAD
+fastapi==0.95.2
+uvicorn[standard]==0.22.0
+httpx==0.24.1
+=======
+fastapi==0.95.2
+uvicorn[standard]==0.22.0
+httpx==0.24.1
+>>>>>>> d4a2367056d677336c8a5b16802e91d113b52a21

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}EventHub - Report Event{% endblock %}
+
+{% block content %}
+  <h2>Report an Event URL</h2>
+  <form method="post" action="/report">
+    <label>
+      URL to report (must start with http://127.0.0.1/):
+      <input type="text" name="url" required placeholder="http://127.0.0.1/...">
+    </label>
+    <br><br>
+    <button type="submit" class="button">Submit Report</button>
+  </form>
+
+  {% if status %}
+    <p>Status: {{ status }}</p>
+  {% endif %}
+{% endblock %}

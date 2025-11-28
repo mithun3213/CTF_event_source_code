@@ -1,0 +1,55 @@
+networks:
+  domjudge:
+    name: domjudge
+
+services:
+  mariadb:
+    container_name: mariadb
+    image: mariadb:latest
+    networks:
+      - domjudge
+    env_file:
+      - domserver.env
+    command: --max-connections=1000 --innodb_snapshot_isolation=OFF --innodb-log-file-size=2G --max-allowed-packet=1G --net_read_timeout=3600 --net_write_timeout=3600
+
+  domserver:
+    container_name: domserver
+    image: domjudge/domserver:8.3.1
+    volumes:
+      - ./admin_password:/opt/domjudge/domserver/etc/initial_admin_password.secret
+    networks:
+      - domjudge
+    ports:
+      - 80:80
+    depends_on:
+      - mariadb
+    env_file:
+      - domserver.env
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "curl",
+          "-u",
+          "admin:this_is_different_in_prod",
+          "-f",
+          "http://127.0.0.1:80/api/v4/status",
+        ]
+      start_period: 60s
+      interval: 15s
+      timeout: 1s
+      retries: 3
+
+  challenge-setup:
+    build:
+      context: ./challenge-setup
+      dockerfile: Dockerfile
+    networks:
+      - domjudge
+    environment:
+      FLAG: FakePP{hier_koennte_ihre_flagge_stehen}
+      ADMIN_PASSWORD: this_is_different_in_prod
+    depends_on:
+      domserver:
+        condition: service_healthy
+    restart: no

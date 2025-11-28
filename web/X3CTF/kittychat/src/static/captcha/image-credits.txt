@@ -1,0 +1,19 @@
+cat_0 - http://pexels.com/photo/white-and-grey-kitten-on-brown-and-black-leopard-print-textile-45201/, CC0
+cat_1 - pexels, CC0
+cat_2 - https://www.pexels.com/photo/cat-sitting-on-fence-sea-and-sky-11491208/, CC0
+cat_3 - https://www.pexels.com/photo/tabby-cat-on-bed-20529920/, CC0
+cat_4 - https://deviantart.com/expiredpopsicle/art/Drunken-Doodle-572521889, CC BY 3.0 
+cat_5 - https://commons.wikimedia.org/wiki/File:WikiNeko-Tan.jpg, CC BY-SA 3.0
+cat_6 - https://www.pexels.com/photo/photo-of-white-short-fur-cat-2942330/, CC0
+cat_7 - https://www.pexels.com/photo/black-cat-with-yellow-eyes-3974516/, CC0
+cat_8 - https://www.pexels.com/photo/cat-on-green-grass-3861171/, CC0
+
+pic_0 - https://www.pexels.com/photo/two-yellow-labrador-retriever-puppies-1108099/, CC0
+pic_1 - https://www.pexels.com/photo/white-long-coated-medium-size-dog-sticking-tongue-out-during-daytime-46505/, CC0
+pic_2 - https://www.pexels.com/photo/photo-of-person-holding-black-and-white-dog-1452717/, CC0
+pic_3 - https://www.pexels.com/photo/adult-cream-retriever-sitting-on-grass-540524/, CC0
+pic_4 - https://www.pexels.com/photo/photo-of-yellow-and-blue-macaw-with-one-wing-open-perched-on-a-wooden-stick-2317904/, CC0
+pic_5 - https://www.pexels.com/photo/photo-of-red-blue-and-yellow-parrot-on-tree-branch-1165082/, CC0
+pic_6 - https://www.pexels.com/photo/red-fox-lying-on-ground-271932/, CC0
+pic_7 - https://www.pexels.com/photo/fox-standing-on-snow-covered-ground-6889167/, CC0
+pic_8 - https://www.pexels.com/photo/red-fox-walking-in-wild-nature-12527573/, CC0

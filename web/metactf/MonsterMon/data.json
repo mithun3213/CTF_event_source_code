@@ -1,0 +1,42 @@
+[
+    {
+        "name": "ShadowNinja92",
+        "card": {
+            "title": "SparkleDrake",
+            "description": "A card imbued with the power of sparkling water blasts, capable of dazzling opponents and creating a shimmering barrier.",
+            "value": 52
+        }
+    },
+    {
+        "name": "ThunderMuncher",
+        "card": {
+            "title": "ThunderPuff",
+            "description": "This card holds the essence of thunder clouds, releasing powerful electric puffs that can stun enemies and clear obstacles.",
+            "value": 95
+        }
+    },
+    {
+        "name": "GlimmerGizmo",
+        "card": {
+            "title": "FlameWhisk",
+            "description": "Harnesses the fiery spirit of a whisking flame, capable of swift fiery attacks and creating a shield of flames.",
+            "value": 83
+        }
+    },
+    {
+        "name": "ZappyZoomer",
+        "card": {
+            "title": "AquaBlitz",
+            "description": "A card that channels the force of rapid water currents, unleashing blitz attacks that can sweep foes away.",
+            "value": 60
+        }
+    },
+    {
+        "name": "FuzzyFlash23",
+        "card": {
+            "title": "GoldenShiny",
+            "description": "temp",
+            "value": 115
+        }
+    }
+]

@@ -1,0 +1,25 @@
+<<<<<<< HEAD
+{
+  "name": "atlas-sim",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite --host 0.0.0.0 --port 5173"
+  },
+  "devDependencies": {
+    "vite": "5.0.0"
+  }
+}
+=======
+{
+  "name": "atlas-sim",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite --host 0.0.0.0 --port 5173"
+  },
+  "devDependencies": {
+    "vite": "5.0.0"
+  }
+}
+>>>>>>> d4a2367056d677336c8a5b16802e91d113b52a21

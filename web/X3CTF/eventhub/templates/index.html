@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block title %}EventHub - Home{% endblock %}
+
+{% block content %}
+  <h2>Welcome!</h2>
+  <p>This is EventHub, where you can create and report events.</p>
+  <ul>
+    <li><a href="/event/1">View Example Event</a></li>
+    <h3>Create a New Event</h3>
+    <form method="post" action="/event">
+      <label>
+        Event Name:
+        <input type="text" name="name" required>
+      </label>
+      <br><br>
+      <label>
+        Protocol:
+        <select name="protocol" required>
+          <option value="http">http</option>
+          <option value="https">https</option>
+        </select>
+      </label>
+      </label>
+      <br><br>
+      <label>
+        Domain:
+        <input type="text" name="domain" value="example.com" required>
+      </label>
+      <br><br>
+      <label>
+        Port:
+        <input type="number" name="port" value="80">
+      </label>
+      <br><br>
+      <label>
+        Path:
+        <input type="text" name="path" value="dashboard" required>
+      </label>
+      <br><br>
+      <button type="submit" class="button">Create Event</button>
+    </form>
+  </ul>
+{% endblock %}

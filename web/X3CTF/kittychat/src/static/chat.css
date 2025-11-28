@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Kirang+Haerang&family=Gamja+Flower&display=swap');
+
+:root {
+  --display-font: "Kirang Haerang", system-ui;
+  --text-font: "Gamja Flower", system-ui;
+}
+
+*::selection {
+  background: hotpink;
+  color: #FFF;
+  text-shadow: 2px 2px #FFF8;
+}
+
+nav {
+  h1 {
+    font-family: var(--display-font);
+    text-align: center;
+    font-size: 128px;
+    color: #FFF;
+    margin: 0;
+    text-shadow: 2px 2px #c600d7;
+    a {
+      color: inherit;
+      text-decoration: inherit;
+      >:nth-child(1){display: inline-block;rotate: 1deg;}
+      >:nth-child(2){display: inline-block;rotate: -4deg;translate: 0 2px;}
+      >:nth-child(3){transform: rotate(20deg) translate(8px, 12px);font-size: 55%;display: inline-block;margin-right: -2px;}
+    }
+  }
+  p {
+    text-align: center;
+    color: #FFF;
+  }
+}
+
+body, html {
+  background: #e65fff;
+  margin: 0;
+  width: 100dvw;
+  height: 100dvh;
+  font-family: var(--text-font);
+  font-size: 18px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  display: flex;
+    justify-content: center;
+}
+
+main, chat-container {
+  flex: 1;
+}
+
+chat-log, chat-input {
+  display: block;
+}
+chat-log, chat-input, chat-side {
+  box-shadow: 0 0 32px #4d007522 inset;
+}
+
+chat-head {
+  color: #FFF;
+  font-size: 24px;
+  font-family: var(--display-font);
+  grid-row: 1;
+  grid-column: 1 / span 2;
+  border-bottom: 2px solid #c56fc7;
+  background: linear-gradient(270deg, #daa5ff, #4d0075);;
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+  justify-content: space-between;
+  a {
+    color: inherit;
+  }
+}
+
+chat-log {
+  max-height: calc(100dvh - 280px - 16px);
+  overflow: auto;
+  padding: 8px;
+  white-space: pre-wrap;
+  grid-row: 2;
+  grid-column: 1;
+}
+
+chat-input {
+  display: flex;
+  input {
+    flex: 1;
+    margin-right: 0;
+  }
+  border-top: 2px solid #c56fc7;
+  grid-row: 3;
+  grid-column: 1;
+}
+
+chat-side {
+  border-left: 2px solid #c56fc7;
+  grid-row: 2 / span 3;
+  grid-column: 2;
+  padding: 8px;
+}
+
+chat-container {
+  container-type: inline-size;
+  display: grid;
+  grid-template-columns: 1fr 250px;
+  grid-template-rows: 40px 1fr 48px;
+  margin: 0 32px 32px;
+  overflow: clip;
+  outline: 2px solid #82009b;
+  border-radius: 2px;
+  background: #FFF;
+  max-width: 1200px;
+}
+
+log-in, account-info {
+  display: block;
+  text-align: center;
+  background: #FFF;
+  padding: 16px;
+  border-radius: 2px;
+  height: fit-content;
+  p {
+    margin: 0 0 8px;
+  }
+}
+
+account-info > p:first-child {
+  font-size: 150%;
+}
+
+input, button {
+  border:none;
+  padding: 4px 12px;
+  margin: 4px;
+  border-radius: 4px;
+}
+
+button, input[type="submit"] {
+  --btn-color: #e65fff;
+  &.secondary {
+    --btn-color: #b7b7b7;
+  }
+  &.disabled {
+    --btn-color: #888;
+    color: #aaa;
+  }
+  font-family: var(--display-font);
+  border: none;
+  font-size: 24px;
+  background: var(--btn-color);
+  color: #FFF;
+  cursor: pointer;
+  transition: background 0.1s;
+  &:hover {
+    background: hsl(from var(--btn-color) h s calc(l - 20.2));
+  }
+  &:active {
+    background: hsl(from var(--btn-color) h s calc(l - 40.2));
+  }
+}
+
+input[type="text"], input[type="password"] {
+  flex: 1;
+  font-size: inherit;
+  font-family: inherit;
+  outline: 2px solid #e65fff44;
+  outline-offset: -2px;
+  transition: outline 0.1s;
+  &:focus {
+    outline: 2px solid #e65fff;
+  }
+}
+
+.notes {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  min-width: 100px;
+  min-height: 100px;
+  background: #FFF;
+  border-radius: 4px;
+  box-shadow: 2px 2px 32px #0002, 2px 2px 4px #0003;
+  padding: 10px;
+  p {
+    margin: 0 0 8px;
+  }
+  button {
+    margin: 8px 0 0 auto;
+  }
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.3s cubic-bezier(0,0.3,0,1), transform 0.3s cubic-bezier(0,0.3,0,1);
+  @starting-style {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}

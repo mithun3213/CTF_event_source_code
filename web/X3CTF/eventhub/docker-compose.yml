@@ -1,0 +1,12 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    deploy:
+      resources:
+        limits: 
+          cpus: "0.2"
+          memory: "300Mi"
+    ports:
+      - "80:80"

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}EventHub - {{ event_name }}{% endblock %}
+
+{% block content %}
+  <h2>{{ event_name }}</h2>
+  <p>Event URL: <a id="continue-link" href="{{ event_url.to_url() }}">{{ event_url.to_url() }}</a></p>
+
+  {% if auto_redir %}
+    <p>You will be redirected automatically in 3 seconds…</p>
+    <script>
+      setTimeout(() => {
+        window.location = "{{ event_url.to_url() }}";
+      }, 3000);
+    </script>
+  {% else %}
+    <p><a class="button" href="{{ event_url.to_url() }}">Continue</a></p>
+  {% endif %}
+{% endblock %}

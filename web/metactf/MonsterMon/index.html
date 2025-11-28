@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MonsterMon Trading Card Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>MonsterMon Trading Card Game</h1>
+    <div class="container">
+        <div class="user-section">
+            <div class="username">User: SemaphoreSprinter</div>
+            <div class="card">
+                <img src="images/commonsquirrel.png" alt="Card Image">
+                <div class="card-title">Common Squirrel</div>
+            </div>
+            <button onclick="inspectCard()">Inspect</button>
+            <div class="button-description">View Your Card Details</div>
+        </div>
+
+        <div class="user-section">
+            <div class="username" id="trade-user-name">User: ShadowNinja92</div>
+            <div class="card">
+                <img id="trade-card-image" src="images/sparkledrake.png" alt="Card Image">
+                <div id="trade-card-title" class="card-title">SparkleDrake</div>
+            </div>
+            <button onclick="trade()">Trade</button>
+            <div class="button-description">Initiate Card Trade</div>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <label for="secondary-user">Select User:</label>
+        <select id="secondary-user">
+            <option value="ShadowNinja92">ShadowNinja92</option>
+            <option value="ThunderMuncher">ThunderMuncher</option>
+            <option value="GlimmerGizmo">GlimmerGizmo</option>
+            <option value="ZappyZoomer">ZappyZoomer</option>
+            <option value="FuzzyFlash23">FuzzyFlash23</option>
+        </select>
+    </div>
+
+    <div class="value-difference" id="valueDifference">Value Difference: 0 Points</div>
+    <div class="small-text" id="smallText">Trades with large value differences are auto rejected!!</div>
+
+    <!-- Popups -->
+    <div class="overlay" id="overlay"></div>
+
+    <div class="popup loading" id="loadingPopup">
+        <h2 id="popup-loading-title">Loading</h2>
+        <p id="popup-loading-description">Please wait, trade processing...</p>
+    </div>
+
+    <div class="popup error" id="errorPopup">
+        <h2 id="popup-error-title">Error</h2>
+        <p id="popup-error-description">Oops! Something went wrong. Please try again later.</p>
+    </div>
+
+    <div class="popup info" id="infoPopup">
+        <h2 id="popup-info-title">Information</h2>
+        <p id="popup-info-description">This is an informational message for the user.</p>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
